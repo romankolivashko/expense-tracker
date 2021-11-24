@@ -5,6 +5,11 @@ import './Chart.css';
 
 const Chart = props => {
   return <div className>
-    {props.dataPoints.map((dataPoint) => <ChartBar value={dataPoint.value} maxValue={null} label={dataPoint.label} />)}
+    {props.dataPoints.map((dataPoint) => <ChartBar 
+      key={dataPoint.label}
+      value={dataPoint.value} 
+      maxValue={null} 
+      label={dataPoint.label} 
+    />)}
   </div>
 }
